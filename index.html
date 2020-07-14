@@ -42,7 +42,6 @@
             </div>
         </div>
         <div class="content-page">
-            <div class="content-code"></div>
             <div class="content">
                 <div class="overflow-hidden content-section" id="content-get-started">
                     <h1 id="get-started">Get started</h1>
@@ -50,7 +49,7 @@
                         BitDegree API is currently at version 1.0 and the root endpoint is <strong>https://www.bitdegree.org/api/v1.0/</strong> for all resources.
                     </p>
                     <p>
-                        To use this API, you need an <strong>API key</strong>. Please contact us at <a href="mailto:martynas.bakanas@bitdegree.org">martynas.bakanas@bitdegree.org</a> to get your own API key.
+                        To use this API, you need an <strong>API key</strong>. You can generate it on <a href="https://www.bitdegree.org/user/affiliates/api" target="_blank">BitDegree website</a>.
                     </p>
                 </div>
                 <div class="overflow-hidden content-section" id="content-get-characters">
@@ -117,9 +116,21 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td>400</td>
+                                <td>
+                                    Missing header <code>Accept: application/json</code>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>401</td>
                                 <td>
                                     Unknown, missing or invalid <code>api_key</code>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>414</td>
+                                <td>
+                                    Request parameters are too long. Maximum length: 190
                                 </td>
                             </tr>
                             <tr>
@@ -138,7 +149,6 @@
                     </table>
                 </div>
             </div>
-            <div class="content-code"></div>
         </div>
         <script src="js/libs/jquery.js"></script>
         <script src="js/script.js"></script>
